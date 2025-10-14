@@ -228,9 +228,9 @@ Run in command line manner.
 bash data_generation.sh
 ```
 
-## 🌟 Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=mat-agent/MAT-Agent&type=Date)](https://star-history.com/#mat-agent/MAT-Agent&Date)
 
+## Stage 2
+Please refer to the pref_data_generation folder
 
 
 # 🙏 Acknowledgements
