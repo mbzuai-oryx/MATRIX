@@ -184,21 +184,6 @@ python examples/gta/main.py
 ```
 
 # Experiments
-## MiniCPM-V
-Refer to official repo [OpenBMB/MiniCPM-V](https://github.com/OpenBMB/MiniCPM-V) for environment setup. Since Qwen-VL might have different version than MiniCPM-V, you should consider using a new conda environment.
-
-To train the model, enter the directory and run the script:
-```bash
-cd experiments/CPM-FT
-
-# for training a model for GAIA dataset
-bash slurm_jobs/job_lora_5_gaia_1206.sh
-
-# for training a model for GTA dataset
-bash slurm_jobs/job_lora_5_gta_with_verifier.sh
-```
-Check this scripts for assign data path. It should takes 4 hours on 8X A100 for 50K dataset per epoch.
-
 ## Qwen-VL
 Refer to official repo [Qwen-VL](https://github.com/QwenLM/Qwen2-VL) for environment setup.
 
@@ -248,28 +233,39 @@ bash data_generation.sh
 ## 🌟 Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=mat-agent/MAT-Agent&type=Date)](https://star-history.com/#mat-agent/MAT-Agent&Date)
 
-# Acknowledgement
-Thanks for their brilliant contributions to the community! Here are the codebases we built upon.
 
-Our agent is based on the wonderful Huggingface Agent framework.
-* https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/agent#transformers.ReactCodeAgent
 
-Our agent design is inspired by the following works:
-* https://github.com/aymeric-roucher/GAIA
-* https://github.com/Ag2S1/Sibyl-System
+# 🙏 Acknowledgements
 
-Model training and inference code:
-* https://github.com/OpenBMB/MiniCPM-V
-* https://github.com/QwenLM/Qwen2-VL
+We gratefully acknowledge the open-source community for their brilliant contributions!  
+**MATRIX** builds upon and is inspired by several outstanding frameworks and research efforts.
 
-# Citation
-If you find our work helpful, please consider cite our paper 📝 and star us ⭐️！
+### 🔧 Frameworks and Base Code
+- [HuggingFace Agents](https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/agent#transformers.ReactCodeAgent) — foundation for the agent framework.
+- [MiniCPM-V](https://github.com/OpenBMB/MiniCPM-V) — model training and inference utilities.
+- [Qwen2-VL](https://github.com/QwenLM/Qwen2-VL) — vision-language model backbone.
 
-```bib
-@inproceedings{gao2025multi,
-      title={Multi-modal Agent Tuning: Building a VLM-Driven Agent for Efficient Tool Usage},
-      author={Gao, Zhi and Zhang, Bofei and Li, Pengxiang and Ma, Xiaojian and Yuan, Tao and Fan, Yue and Wu, Yuwei and Jia, Yunde and Zhu, Song-Chun and Li, Qing},
-      booktitle={The Thirteenth International Conference on Learning Representations(ICLR)},
-      year=2025
+### 💡 Related Works and Inspiration
+- [GAIA](https://github.com/aymeric-roucher/GAIA) — multimodal reasoning and evaluation benchmarks.
+- [Sibyl-System](https://github.com/Ag2S1/Sibyl-System) — hierarchical agent control framework.
+- [MAT (Multi-modal Agent Tuning)](https://github.com/mat-agent/MAT-Agent) — multimodal tool-use agent and dataset design inspiration.
+
+We extend our sincere thanks to all open-source contributors whose work helped make **MATRIX** possible.
+
+---
+
+# 📝 Citation
+
+If you find our work helpful, please consider citing our paper 📝 and giving us a ⭐️ on GitHub!
+
+```bibtex
+@misc{ashraf2025matrixmultimodalagenttuning,
+  title={MATRIX: Multimodal Agent Tuning for Robust Tool-Use Reasoning}, 
+  author={Tajamul Ashraf and Umair Nawaz and Abdelrahman M. Shaker and Rao Muhammad Anwer and Philip Torr and Fahad Shahbaz Khan and Salman Khan},
+  year={2025},
+  eprint={2510.08567},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2510.08567}
 }
-```
+
