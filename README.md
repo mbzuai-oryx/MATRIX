@@ -10,7 +10,7 @@
 
 ---
 
-![MATRIX Logo](static/images/MATRIX_logo.png)
+![MATRIX Logo](docs/static/images/MATRIX_logo.png)
 
 ---
 
