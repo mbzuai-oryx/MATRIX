@@ -1,6 +1,15 @@
 # MATRIX: Multimodal Agent Tuning for Robust Tool-Use Reasoning  
 🔥 **Preprint 2025 (arXiv: [2510.08567](https://arxiv.org/abs/2510.08567))**
 
+<p align="center">
+  <a href="https://arxiv.org/pdf/2510.08567"><b>📄 Paper</b></a> •
+  <a href="https://github.com/mbzuai-oryx/MATRIX"><b>💻 Code</b></a> •
+  <a href="https://huggingface.co/datasets/mbzuai/M-TRACE"><b>🤗 Dataset (M-TRACE)</b></a> •
+  <a href="https://tajamulashraf.com/matrix"><b>🌍 Project Page</b></a>
+</p>
+
+---
+
 ![MATRIX Logo](static/images/MATRIX_logo.png)
 
 ---
@@ -16,15 +25,6 @@ It introduces a **two-stage tuning framework**:
 This staged design enables robust decision-making, recovery from partial rollouts, and fine-grained reasoning in open-world multimodal environments.
 
 ---
-
-## 🌐 Official Links
-
-| Resource | Link |
-|-----------|------|
-| 📄 Paper | [arXiv:2510.08567](https://arxiv.org/pdf/2510.08567) |
-| 💻 Code | [GitHub Repository](https://github.com/mbzuai-oryx/MATRIX) |
-| 🤗 Dataset (M-TRACE) | [Hugging Face Dataset](https://huggingface.co/datasets/mbzuai/M-TRACE) |
-| 🌍 Project Page | [tajamulashraf.com/matrix](https://tajamulashraf.com/matrix) |
 
 ---
 
