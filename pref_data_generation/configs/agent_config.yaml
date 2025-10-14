@@ -1,0 +1,49 @@
+
+
+tonggpt:
+  model_name:  gpt-4o-mini-2024-07-18
+  region: AZURE_REGION
+  api_key:  AZURE_API_KEY
+
+deepseek:
+  model_name: deepseek-r1
+  api_key: Aliyun_API_KEY
+
+visualizer:
+  model_name: gpt-4o-mini-2024-07-18
+  region: AZURE_REGION
+  api_key:  AZURE_API_KEY
+
+qwen:
+  model_name: Qwen/Qwen2-VL-7B-Instruct
+  endpoint: 
+
+agent_controller:
+  engine_type: qwen # qwen, minicpm, tonggpt
+  web_qa:
+  model_name: Qwen/Qwen2-VL-7B-Instruct
+
+internvl2:
+  model_name: OpenGVLab/InternVL2-8B
+
+llava:
+  model_name: Lin-Chen/open-llava-next-llama3-8b
+
+web_qa:
+  model_name: gpt-4o-mini-2024-07-18
+  
+search_agent:
+  type: agent
+  model_name: gpt-4o-2024-08-06
+  region: eastus
+  api_key:  AZURE_API_KEY
+
+# Google Search API (https://developers.google.com/custom-search/v1/overview)
+search_engine:
+-
+  cx: Google Search Engine ID
+  key: Google API Key
+
+verifier:
+  endpoint: dgx-hyperplane19
+  use_vllm: false

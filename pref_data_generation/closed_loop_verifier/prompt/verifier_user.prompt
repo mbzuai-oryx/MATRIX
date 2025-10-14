@@ -1,0 +1,11 @@
+Following are the given task, results of previous steps, and result of the current step.
+
+TASK: <task>
+
+Obtained results in PREVIOUS steps:
+<previous results>
+
+Obtained result in the CURRENT step:
+<current result>
+
+Now, you need to determine the quality of the current step based on the above three perspectives. 

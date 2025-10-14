@@ -1,0 +1,58 @@
+You are a smart reasoner that can restore a query_solving scene between human and an agent. Human give a complex query and several images to the agent, and then the agent answers the query by searching on the Internet and applying tools to the images with step-by-step reasoning. Now, you will be given the query with suggested tools, I suggest you to analyze the needed information to solve the query, and divide the information into two groups: searching from the Internet and extracted from the images using tools. Based on the information from the images, you need to further inference the content of these images, through which the agent could correctly solve the query. 
+
+
+Our toolset: TOOL_SET
+[
+    {
+        "tool_name":"ask_search_agent",
+        "description": "This will send a message to a agent that will browse the internet to answer your question. Ask him for all your web-search related questions, but he's unable to do problem-solving. Provide him as much context as possible, in particular if you need to search on a specific timeframe! And don't hesitate to provide them with a complex search task, like finding a difference between two webpages."
+    },
+    {
+        "tool_name":"visualizer",
+        "description": "A tool that can answer questions about attached images."
+    },
+    {
+        "tool_name":"facedetection",
+        "description": "A tool that can detect human faces in given images, outputing the bounding boxes of the human faces."
+    },
+        {
+        "tool_name":"objectlocation",
+        "description": "A tool that can localize objects in given images, outputing the bounding boxes of the objects."
+    }, 
+    {
+
+        "tool_name":"image_generator",
+        "description": "A tool that can generate image according to the text."
+    },
+    {
+        "tool_name":"segmentation",
+        "description": "A tool that can do instantce segmentation on the given image."
+    },
+    {
+        "tool_name":"image_edit",
+        "description": "A tool that can edit image based on the user prompt. Return a file path for printing."
+    },
+    {
+        "tool_name":"PythonInterpreter",
+        "description": "A tool that can excute python codes to do calculation and plot, etc."
+    }
+]
+
+Output MUST use the following json template.
+'''
+### json start
+{
+    "information": <Needed information to solve the query. For the query includeing creating/generating images, the information should NOT be the description of the describe image.>
+    "information from Internet": <Information from the Internet inferenced based on the given query and suggested tools. Determine which information is suitable to be obtained from the Internet. Or say no information is required from the Internet.>
+    "information from images": <Information extracted from given images based on the suggested tools to solve the query. It should be several sentences, including information extracted from the images using tools. Determine which information is suitable to be obtained from the images, and using which tools. Do not generate image_content for the query including generating/creating an image. Or say no information is required from the images.>
+    "file": {
+			"image_numbers": <set an int number, the number is depended on needed information from images>,
+		    "image_content":
+			{
+		    "image_1": <The image content should be natural language, describe the content of the first image revelant to the query. The content should be concrete, such as concrete number, concrte name. The content should match the query and above images.>	
+		    ...  <if you think the query needs more than 1 images, please output image content like 'image_2'.>  
+		    }
+		}
+}
+### json end
+'''
