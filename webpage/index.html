@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>GTA: A Benchmark for General Tool Agents</title>
+  <link rel="icon" type="image/x-icon" href="static/images/robot.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <!-- add for leaderboard -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+  <style>
+    .bold-black {
+      color: rgb(48, 48, 48);
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <!-- Title -->
+            <!-- Title -->
+            <div class="has-text-centered" style="margin-bottom: 2rem;">
+              <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <img src="static/images/MATRIX_logo.png" alt="MATRIX Logo" style="height: 70px; width: auto;">
+                <h1 class="title"
+                  style="font-size: 5rem; font-weight: 900; line-height: 1; letter-spacing: 1px; color: #0a3d62; margin: 0;">
+                  MATRIX
+                </h1>
+              </div>
+              <h2 class="title is-3 publication-title" style="margin-top: 1rem; font-size: 1.9rem; color: #2f3542;">
+                Multimodal Agent Tuning for Robust Tool-Use Reasoning
+              </h2>
+            </div>
+
+
+
+
+
+            <!-- Authors -->
+            <div class="is-size-5 publication-authors">
+              <p>
+                <span class="author-block">
+                  <a href="https://www.tajamulashraf.com" target="_blank">Tajamul Ashraf</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=DhKZ-3kAAAAJ" target="_blank">Umair
+                    Nawaz</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=TF8HrB0AAAAJ" target="_blank">Abdelrahman M.
+                    Shaker</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://mbzuai.ac.ae/people/rao-anwer/" target="_blank">Rao Muhammad Anwer</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=JicYPdAAAAAJ" target="_blank">Philip
+                    Torr</a><sup>2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://mbzuai.ac.ae/people/fahad-khan/" target="_blank">Fahad Shahbaz Khan</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://mbzuai.ac.ae/people/salman-khan/" target="_blank">Salman Khan</a><sup>1</sup>
+                </span>
+              </p>
+
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup>1</sup> MBZUAI,<sup>2</sup> University of Oxford
+              </span>
+              <span class="eql-cntrb"><br><sup>*</sup>Corresponding Author</span>
+            </div>
+
+            <!-- Links -->
+            <div class="column has-text-centered">
+              <!-- Links -->
+<div class="publication-links" style="text-align: center; margin-top: 1rem;">
+
+  <!-- ArXiv -->
+  <span class="link-block" style="margin: 6px;">
+    <a href="https://arxiv.org/pdf/2510.08567" target="_blank"
+      class="external-link button is-normal is-rounded"
+      style="background: linear-gradient(90deg, #ffb88c, #ffecd2); color: #222; border: none; font-weight: 600;">
+      <span class="icon"><i class="ai ai-arxiv"></i></span>
+      <span>arXiv</span>
+    </a>
+  </span>
+
+  <!-- Code -->
+  <span class="link-block" style="margin: 6px;">
+    <a href="https://github.com/mbzuai-oryx/MATRIX" target="_blank"
+      class="external-link button is-normal is-rounded"
+      style="background: linear-gradient(90deg, #a1c4fd, #c2e9fb); color: #222; border: none; font-weight: 600;">
+      <span class="icon"><i class="fab fa-github"></i></span>
+      <span>Code</span>
+    </a>
+  </span>
+
+  <!-- Dataset -->
+  <span class="link-block" style="margin: 6px;">
+    <a href="https://huggingface.co/datasets/mbzuai/M-TRACE" target="_blank"
+      class="external-link button is-normal is-rounded"
+      style="background: linear-gradient(90deg, #b2fefa, #e6f7ff); color: #222; border: none; font-weight: 600;">
+      <span class="icon"><i class="fas fa-database"></i></span>
+      <span>Data</span>
+    </a>
+  </span>
+
+  <!-- BibTeX -->
+  <span class="link-block" style="margin: 6px;">
+    <a href="#BibTeX"
+      class="external-link button is-normal is-rounded"
+      style="background: linear-gradient(90deg, #f6d365, #fda085); color: #222; border: none; font-weight: 600;">
+      <span class="icon"><i class="fas fa-quote-right"></i></span>
+      <span>BibTeX</span>
+    </a>
+  </span>
+
+</div>
+
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <figure>
+          <a>
+            <img width="100%" src="static/images/teasor1.png">
+          </a>
+          <p class="caption">
+            Comparison of baseline Qwen2-VL, MAT,
+            and proposed MATRIX agent on a visual reasoning task. MATRIX shows superior tool
+            use, fewer hallucinations, and more consistent reasoning, while Qwen2-VL and MAT often
+            struggle with tool coordination and fallback strategies.
+          </p>
+        </figure>
+        <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2> -->
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              As vision-language models (VLMs) evolve into multimodal controllers capable of interacting with external
+              tools,
+              a key limitation remains, the scarcity of high-quality multimodal trajectories and the prohibitive cost
+              of manual annotation.
+              To overcome this, we present <b>MATRIX</b>, a <em>vision-centric agent tuning framework</em> designed for
+              robust and scalable tool-use reasoning.
+              MATRIX automatically synthesizes multimodal trajectories, generates step-wise preference pairs, and trains
+              a VLM controller to execute complex reasoning and decision-making tasks.
+              Our pipeline introduces <b>M-TRACE</b>, a large-scale dataset comprising <b>28.5K multimodal tasks</b> and
+              <b>177K verified trajectories</b>,
+              enabling imitation-based trajectory tuning for grounded tool interaction.
+              Building upon this, we develop <b>MATRIX Agent</b>, a controller fine-tuned on M-TRACE for step-wise
+              reasoning over visual and textual inputs.
+              To achieve finer behavioral alignment, we further propose <b>Pref-X</b>, a collection of <b>11K
+                automatically generated preference pairs</b>,
+              and optimize MATRIX through step-wise preference learning.
+              Evaluations across three multimodal tool-use benchmarks, <b>Agent-X</b>, <b>GTA</b>, and <b>GAIA</b>
+              demonstrate that MATRIX consistently outperforms both open- and closed-source VLMs,
+              marking a significant step toward scalable, general-purpose multimodal agents with effective and reliable
+              tool-use capabilities.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container" style="width: 70%; margin: 0 auto;">
+        <h2 class="title has-text-centered">Introduction</h2>
+        <div class="content has-text-justified">
+          <p style="text-align: left;">
+            <b>MATRIX</b> is a vision-centric agent tuning framework that teaches multimodal models to use tools
+            effectively and safely.
+            While existing agents rely on costly, narrow, manually curated tool-use data, MATRIX builds scalable
+            learning from both
+            <b>traces</b> (verified trajectories) and <b>preferences</b> (step-level refinements).
+          </p>
+          <p style="text-align: left;">
+            We first introduce <b>M-TRACE</b> — 28.5K multimodal tasks with 177K verified trajectories — for
+            imitation-based grounding.
+            Then, we propose <b>Pref-X</b> — 11K preference pairs — for fine-grained alignment via Direct Preference
+            Optimization (DPO).
+            This two-stage process helps agents plan, recover, and adapt tool usage with precision.
+          </p>
+          <p style="text-align: left;">
+            Evaluated on <b>Agent-X</b>, <b>GTA</b>, and <b>GAIA</b>, MATRIX outperforms both open and closed-source
+            VLMs,
+            improving accuracy by up to <b>23%</b> and setting a new benchmark for robust multimodal tool-use reasoning.
+          </p>
+          <figure>
+            <a>
+              <img width="90%" style="text-align: left;" src="static/images/matrix_intro.jpg"
+                alt="MATRIX framework overview">
+            </a>
+            <p class="caption">
+              <b>Figure 1:</b> MATRIX combines supervised trajectory learning (M-TRACE) with preference-based refinement
+              (Pref-X)
+              for step-wise, grounded tool reasoning.
+            </p>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Image carousel -->
+  <section class="hero is-small" style="width: 70%; margin: 0 auto;">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title has-text-centered">Example Tasks</h2>
+        <p style="text-align: justify;">
+          Below are example tasks where <b>MATRIX</b> demonstrates strong reasoning and accurate tool use across
+          <b>Agent-X</b>, <b>GTA</b>, and <b>GAIA</b> benchmarks.
+          Each task involves <b>multimodal contexts</b> (images, text, or structured inputs) and
+          <b>step-implicit reasoning</b>—where the model must identify the right tools, plan actions,
+          and execute them to reach the <b>ground truth</b> solution.
+          These examples highlight MATRIX’s ability to combine perception, logic, and action in real-world settings.
+          The dataset and full examples are available on
+          <a href="https://huggingface.co/datasets/mbzuai/M-TRACE" target="_blank">Hugging Face</a>.
+        </p>
+
+        <div style="width: 80%; margin: 0 auto; text-align: center;">
+          <div id="results-carousel" class="carousel results-carousel" style="justify-content: center;">
+            <div class="item">
+              <img src="static/images/E1.png" alt="Agent-X example"
+                style="display: block; margin: 0 auto; border-radius: 10px; max-width: 100%;" />
+            </div>
+            <div class="item">
+              <img src="static/images/E2.png" alt="GTA example"
+                style="display: block; margin: 0 auto; border-radius: 10px; max-width: 100%;" />
+            </div>
+            <div class="item">
+              <img src="static/images/E3.png" alt="GAIA example"
+                style="display: block; margin: 0 auto; border-radius: 10px; max-width: 100%;" />
+            </div>
+            <div class="item">
+              <img src="static/images/E4.png" alt="Tool-use reasoning"
+                style="display: block; margin: 0 auto; border-radius: 10px; max-width: 100%;" />
+            </div>
+            <div class="item">
+              <img src="static/images/E5.png" alt="Ground-truth comparison"
+                style="display: block; margin: 0 auto; border-radius: 10px; max-width: 100%;" />
+            </div>
+          </div>
+        </div>
+
+        <p class="caption" style="text-align: center; margin-top: 10px;">
+          <b>Figure:</b> Examples of MATRIX achieving accurate, grounded reasoning across Agent-X, GTA, and GAIA tasks —
+          reaching near ground-truth performance through adaptive, step-wise tool selection.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- End image carousel -->
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container" style="width: 70%; margin: 0 auto;">
+        <h2 class="title has-text-centered">MATRIX Agent </h2>
+        <div class="content has-text-justified">
+          <p style="text-align: justify;">
+            <b>MATRIX</b> is a vision-centric <b>multimodal agent</b> designed for reliable, step-wise reasoning and
+            intelligent tool use.
+            The key challenge for such agents lies in the scarcity of <b>high-quality trajectories</b> and the cost of
+            manual annotations,
+            both of which restrict scalability and generalization across diverse environments.
+          </p>
+
+          <p style="text-align: justify;">
+            To address this, we introduce a <b>two-stage training framework</b> that combines
+            <em>trajectory supervision</em> with <em>preference optimization</em>.
+            In the first stage, <b>Supervised Fine-Tuning (SFT)</b> on automatically synthesized multimodal trajectories
+            from <b>M-TRACE</b> equips the controller with structured tool-use and reasoning skills.
+            In the second stage, <b>preference optimization</b> via <b>Direct Preference Optimization (DPO)</b>
+            (Kong et al., 2025) on step-level exploration data (<b>Pref-X</b>) further refines decision-making
+            beyond imitation, encouraging the agent to select <b>accurate</b>, <b>consistent</b>, and
+            <b>goal-directed</b> actions.
+          </p>
+
+        </div>
+        <figure>
+          <a>
+            <div style="text-align: center;">
+              <img width="90%" src="static/images/mtrace.png">
+            </div>
+
+          </a>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container" style="width: 70%; margin: 0 auto;">
+        <h2 class="title has-text-centered">M-TRACE Dataset</h2>
+        <div class="content has-text-justified">
+          <p style="text-align: justify;">
+            <b>M-TRACE</b> is a large-scale dataset of <b>28.5K multimodal tasks</b> and
+            <b>177K verified trajectories</b> for grounded tool-use reasoning.
+            Each trajectory is double-verified for <em>semantic accuracy</em> and
+            <em>execution validity</em>, ensuring high-quality supervision for MATRIX.
+          </p>
+        </div>
+
+        <figure>
+          <div style="text-align: center;">
+            <img width="90%" src="static/images/analysis.png" alt="M-TRACE dataset analysis"
+              style="border-radius: 8px;">
+          </div>
+          <p class="caption" style="text-align: center;">
+            <b>Figure 3:</b> Statistics of M-TRACE — file types, domains, tools, and step complexity.
+          </p>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container" style="width: 70%; margin: 0 auto;">
+      <h2 class="title has-text-centered">Pref-X Dataset</h2>
+      <div class="content has-text-justified">
+        <p style="text-align: justify;">
+          <b>Pref-X</b> is a dataset of <b>11K step-wise preference pairs</b> built to refine <b>MATRIX</b> beyond imitation. 
+          It enables the agent to compare candidate actions, favor accurate and consistent ones, and learn from step-level feedback.
+          Each preference pair is derived through <em>exploration and verification</em>, 
+          allowing <b>Direct Preference Optimization (DPO)</b> to align the controller toward reliable, goal-directed tool use.
+        </p>
+      </div>
+
+      <figure>
+        <div style="text-align: center;">
+          <img width="90%" src="static/images/prefx.png" alt="Pref-X dataset pipeline" style="border-radius: 8px;">
+        </div>
+        <p class="caption" style="text-align: center;">
+          <b>Figure 4:</b> <b>Pref-X</b> pipeline — generating and verifying preference pairs for step-wise preference tuning via DPO.
+        </p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container" style="width: 70%; margin: 0 auto;">
+        <h2 class="title has-text-centered">Evaluation & Results</h2>
+
+        <div class="content has-text-justified">
+          <p style="text-align: justify;">
+            We evaluate <b>MATRIX</b> across three challenging multimodal reasoning benchmarks —
+            <b>Agent-X</b>, <b>GTA</b>, and <b>GAIA</b>.
+            These tasks test fine-grained step reasoning, long-horizon tool use, and open-ended multimodal
+            understanding.
+            <b>MATRIX</b> consistently surpasses both open- and closed-source agents,
+            demonstrating stronger grounding, faithfulness, and decision consistency.
+          </p>
+        </div>
+
+        <!-- Agent-X Results -->
+        <figure>
+          <div style="text-align: center;">
+            <img width="90%" src="static/images/agentx.png" alt="Agent-X results" style="border-radius: 8px;">
+          </div>
+          <p class="caption" style="text-align: center;">
+            <b>Figure 4:</b> <b>MATRIX</b> achieves state-of-the-art tool and reasoning accuracy on <b>Agent-X</b>,
+            improving step-wise precision and grounding over all open models.
+          </p>
+          <br>
+        </figure>
+
+        <div class="content has-text-justified">
+          <p style="text-align: justify;">
+            On <b>GTA</b> and <b>GAIA</b>, which require realistic tool interaction and complex multimodal reasoning,
+            <b>MATRIX</b> delivers up to <b>+23%</b> higher answer accuracy through its preference-tuned controller,
+            enabling reliable step planning and goal completion in real-world tasks.
+          </p>
+        </div>
+
+        <!-- GTA & GAIA Results -->
+        <figure>
+          <div style="text-align: center;">
+            <img width="90%" src="static/images/gata_gaia.png" alt="GTA and GAIA results" style="border-radius: 8px;">
+          </div>
+          <p class="caption" style="text-align: center;">
+            <b>Figure 5:</b> <b>MATRIX</b> outperforms open- and closed-source agents on <b>GTA</b> and <b>GAIA</b>,
+            showcasing superior generalization and preference-aligned reasoning.
+          </p>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+
+  <!-- javascript code end -->
+
+  <!-- BibTeX citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title has-text-centered">BibTeX</h2>
+      <pre><code>@misc{matrix,
+  title={MATRIX: Multimodal Agent Tuning for Robust Tool-Use Reasoning}, 
+  author={Tajamul Ashraf and Umair Nawaz and Abdelrahman M. Shaker and Rao Muhammad Anwer and Philip Torr and Fahad Shahbaz Khan and Salman Khan},
+  year={2025},
+  eprint={2510.08567},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2510.08567}
+}</code></pre>
+    </div>
+  </section>
+
+
+  <!--End BibTex citation -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
