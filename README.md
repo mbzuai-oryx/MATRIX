@@ -49,7 +49,7 @@ This staged design enables robust decision-making, recovery from partial rollout
 
 
 <p align="center">
-  <img src="docs/static/images/teasor1" width="80%">
+  <img src="docs/static/images/teasor1.png" width="80%">
 </p>
 <p align="center">
   <img src="docs/static/images/analysis.png" width="80%">
