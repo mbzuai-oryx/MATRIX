@@ -1,7 +1,16 @@
 # MATRIX: Multimodal Agent Tuning for Robust Tool-Use Reasoning  
 🔥 **Preprint 2025 (arXiv: [2510.08567](https://arxiv.org/abs/2510.08567))**
 
-![MATRIX Logo](static/images/MATRIX_logo.png)
+<p align="center">
+  <a href="https://arxiv.org/pdf/2510.08567"><b>📄 Paper</b></a> •
+  <a href="https://github.com/mbzuai-oryx/MATRIX"><b>💻 Code</b></a> •
+  <a href="https://huggingface.co/datasets/mbzuai/M-TRACE"><b>🤗 Dataset (M-TRACE)</b></a> •
+  <a href="https://tajamulashraf.com/matrix"><b>🌍 Project Page</b></a>
+</p>
+
+---
+
+![MATRIX Logo](docs/static/images/MATRIX_logo.png)
 
 ---
 
@@ -17,40 +26,33 @@ This staged design enables robust decision-making, recovery from partial rollout
 
 ---
 
-## 🌐 Official Links
-
-| Resource | Link |
-|-----------|------|
-| 📄 Paper | [arXiv:2510.08567](https://arxiv.org/pdf/2510.08567) |
-| 💻 Code | [GitHub Repository](https://github.com/mbzuai-oryx/MATRIX) |
-| 🤗 Dataset (M-TRACE) | [Hugging Face Dataset](https://huggingface.co/datasets/mbzuai/M-TRACE) |
-| 🌍 Project Page | [tajamulashraf.com/matrix](https://tajamulashraf.com/matrix) |
-
----
-
-## 🧠 Key Features
-
-- 🎯 **Grounded Learning (M-TRACE):** 28.5K multimodal tasks and 177K verified trajectories for tool reasoning.  
-- ⚖️ **Preference Alignment (Pref-X):** 11K step-wise preference pairs optimized via DPO.  
-- 🔁 **Adaptive Controller:** Learns beyond imitation through exploration and preference feedback.  
-- 💬 **Multimodal Reasoning:** Handles text, image, table, and code-based inputs.  
-- 🔧 **Plug-and-Play Design:** Compatible with open VLMs — Qwen2-VL, InternVL, and MiniCPM-V.  
-
----
-
 ## 📊 Performance Highlights
 
-| Benchmark | Metric | Open Baseline | **MATRIX** | Gain |
-|------------|---------|----------------|-------------|------|
-| **Agent-X** | Tool Accuracy | 0.54 | **0.91** | +37% |
-| **GTA** | Answer Accuracy | 42.3% | **65.4%** | +23% |
-| **GAIA** | L1 / L2 / L3 | 16.9 / 8.1 / 0.0 | **29.1 / 19.2 / 6.8** | ↑ Across All |
+| Benchmark | Metric | Open Baseline (Qwen2-VL-7B) | **MATRIX (Ours)** | Improvement |
+|------------|---------|------------------------------|-------------------|--------------|
+| **Agent-X** | Step-by-Step | 0.51 | **0.59** | +8% |
+|  | Deep Reasoning | 0.39 | **0.44** | +5% |
+|  | Tool Accuracy | 0.54 | **0.91** | +37% |
+|  | Faithfulness Accuracy | 0.62 | **0.71** | +9% |
+|  | Factual Precision | 0.34 | **0.88** | +54% |
+|  | Grounding Accuracy | 0.55 | **0.76** | +21% |
+|  | Overall Outcome | 0.57 | **0.77** | +20% |
+| **GTA** | Answer Accuracy | 42.31% | **65.38% ± 4%** | +23.07% |
+| **GAIA** | Level 1 / Level 2 / Level 3 / Avg. | 16.98 / 8.14 / 0.00 / 9.70 | **29.15 / 19.28 / 6.84 / 21.47 ± 3%** | +11–12% |
+
+---
+
+📈 **Summary:**  
+- On **Agent-X**, MATRIX achieves the highest **tool and reasoning accuracy** among open-source agents, improving tool accuracy by **+37%** and overall performance by **+20%**.  
+- On **GTA**, MATRIX outperforms all open and closed-source controllers by **+23%** in answer accuracy.  
+- On **GAIA**, MATRIX shows consistent gains across all reasoning levels, with up to **+12%** improvement on average accuracy.
+
 
 <p align="center">
-  <img src="static/images/agentx.png" width="80%">
+  <img src="docs/static/images/teasor1.png" width="80%">
 </p>
 <p align="center">
-  <img src="static/images/gata_gaia.png" width="80%">
+  <img src="docs/static/images/analysis.png" width="80%">
 </p>
 
 ---
@@ -182,21 +184,6 @@ python examples/gta/main.py
 ```
 
 # Experiments
-## MiniCPM-V
-Refer to official repo [OpenBMB/MiniCPM-V](https://github.com/OpenBMB/MiniCPM-V) for environment setup. Since Qwen-VL might have different version than MiniCPM-V, you should consider using a new conda environment.
-
-To train the model, enter the directory and run the script:
-```bash
-cd experiments/CPM-FT
-
-# for training a model for GAIA dataset
-bash slurm_jobs/job_lora_5_gaia_1206.sh
-
-# for training a model for GTA dataset
-bash slurm_jobs/job_lora_5_gta_with_verifier.sh
-```
-Check this scripts for assign data path. It should takes 4 hours on 8X A100 for 50K dataset per epoch.
-
 ## Qwen-VL
 Refer to official repo [Qwen-VL](https://github.com/QwenLM/Qwen2-VL) for environment setup.
 
@@ -246,28 +233,39 @@ bash data_generation.sh
 ## 🌟 Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=mat-agent/MAT-Agent&type=Date)](https://star-history.com/#mat-agent/MAT-Agent&Date)
 
-# Acknowledgement
-Thanks for their brilliant contributions to the community! Here are the codebases we built upon.
 
-Our agent is based on the wonderful Huggingface Agent framework.
-* https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/agent#transformers.ReactCodeAgent
 
-Our agent design is inspired by the following works:
-* https://github.com/aymeric-roucher/GAIA
-* https://github.com/Ag2S1/Sibyl-System
+# 🙏 Acknowledgements
 
-Model training and inference code:
-* https://github.com/OpenBMB/MiniCPM-V
-* https://github.com/QwenLM/Qwen2-VL
+We gratefully acknowledge the open-source community for their brilliant contributions!  
+**MATRIX** builds upon and is inspired by several outstanding frameworks and research efforts.
 
-# Citation
-If you find our work helpful, please consider cite our paper 📝 and star us ⭐️！
+### 🔧 Frameworks and Base Code
+- [HuggingFace Agents](https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/agent#transformers.ReactCodeAgent) — foundation for the agent framework.
+- [MiniCPM-V](https://github.com/OpenBMB/MiniCPM-V) — model training and inference utilities.
+- [Qwen2-VL](https://github.com/QwenLM/Qwen2-VL) — vision-language model backbone.
 
-```bib
-@inproceedings{gao2025multi,
-      title={Multi-modal Agent Tuning: Building a VLM-Driven Agent for Efficient Tool Usage},
-      author={Gao, Zhi and Zhang, Bofei and Li, Pengxiang and Ma, Xiaojian and Yuan, Tao and Fan, Yue and Wu, Yuwei and Jia, Yunde and Zhu, Song-Chun and Li, Qing},
-      booktitle={The Thirteenth International Conference on Learning Representations(ICLR)},
-      year=2025
+### 💡 Related Works and Inspiration
+- [GAIA](https://github.com/aymeric-roucher/GAIA) — multimodal reasoning and evaluation benchmarks.
+- [Sibyl-System](https://github.com/Ag2S1/Sibyl-System) — hierarchical agent control framework.
+- [MAT (Multi-modal Agent Tuning)](https://github.com/mat-agent/MAT-Agent) — multimodal tool-use agent and dataset design inspiration.
+
+We extend our sincere thanks to all open-source contributors whose work helped make **MATRIX** possible.
+
+---
+
+# 📝 Citation
+
+If you find our work helpful, please consider citing our paper 📝 and giving us a ⭐️ on GitHub!
+
+```bibtex
+@misc{ashraf2025matrixmultimodalagenttuning,
+  title={MATRIX: Multimodal Agent Tuning for Robust Tool-Use Reasoning}, 
+  author={Tajamul Ashraf and Umair Nawaz and Abdelrahman M. Shaker and Rao Muhammad Anwer and Philip Torr and Fahad Shahbaz Khan and Salman Khan},
+  year={2025},
+  eprint={2510.08567},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2510.08567}
 }
-```
+
