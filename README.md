@@ -2,7 +2,7 @@
 <p align="center">
   <a href="https://arxiv.org/pdf/2510.08567"><b>📄 Paper</b></a> •
   <a href="https://github.com/mbzuai-oryx/MATRIX"><b>💻 Code</b></a> •
-  <a href="https://huggingface.co/datasets/mbzuai/M-TRACE"><b>🤗 Dataset (M-TRACE)</b></a> •
+  <a href="https://huggingface.co/datasets/mbzuai/M-TRACE"><b>🤗 Data</b></a> •
   <a href="https://tajamulashraf.com/matrix"><b>🌍 Project Page</b></a>
 </p>
 
