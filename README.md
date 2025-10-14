@@ -26,25 +26,27 @@ This staged design enables robust decision-making, recovery from partial rollout
 
 ---
 
----
-
-## 🧠 Key Features
-
-- 🎯 **Grounded Learning (M-TRACE):** 28.5K multimodal tasks and 177K verified trajectories for tool reasoning.  
-- ⚖️ **Preference Alignment (Pref-X):** 11K step-wise preference pairs optimized via DPO.  
-- 🔁 **Adaptive Controller:** Learns beyond imitation through exploration and preference feedback.  
-- 💬 **Multimodal Reasoning:** Handles text, image, table, and code-based inputs.  
-- 🔧 **Plug-and-Play Design:** Compatible with open VLMs — Qwen2-VL, InternVL, and MiniCPM-V.  
-
----
-
 ## 📊 Performance Highlights
 
-| Benchmark | Metric | Open Baseline | **MATRIX** | Gain |
-|------------|---------|----------------|-------------|------|
-| **Agent-X** | Tool Accuracy | 0.54 | **0.91** | +37% |
-| **GTA** | Answer Accuracy | 42.3% | **65.4%** | +23% |
-| **GAIA** | L1 / L2 / L3 | 16.9 / 8.1 / 0.0 | **29.1 / 19.2 / 6.8** | ↑ Across All |
+| Benchmark | Metric | Open Baseline (Qwen2-VL-7B) | **MATRIX (Ours)** | Improvement |
+|------------|---------|------------------------------|-------------------|--------------|
+| **Agent-X** | Step-by-Step | 0.51 | **0.59** | +8% |
+|  | Deep Reasoning | 0.39 | **0.44** | +5% |
+|  | Tool Accuracy | 0.54 | **0.91** | +37% |
+|  | Faithfulness Accuracy | 0.62 | **0.71** | +9% |
+|  | Factual Precision | 0.34 | **0.88** | +54% |
+|  | Grounding Accuracy | 0.55 | **0.76** | +21% |
+|  | Overall Outcome | 0.57 | **0.77** | +20% |
+| **GTA** | Answer Accuracy | 42.31% | **65.38% ± 4%** | +23.07% |
+| **GAIA** | Level 1 / Level 2 / Level 3 / Avg. | 16.98 / 8.14 / 0.00 / 9.70 | **29.15 / 19.28 / 6.84 / 21.47 ± 3%** | +11–12% |
+
+---
+
+📈 **Summary:**  
+- On **Agent-X**, MATRIX achieves the highest **tool and reasoning accuracy** among open-source agents, improving tool accuracy by **+37%** and overall performance by **+20%**.  
+- On **GTA**, MATRIX outperforms all open and closed-source controllers by **+23%** in answer accuracy.  
+- On **GAIA**, MATRIX shows consistent gains across all reasoning levels, with up to **+12%** improvement on average accuracy.
+
 
 <p align="center">
   <img src="static/images/agentx.png" width="80%">
