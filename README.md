@@ -1,6 +1,4 @@
 # MATRIX: Multimodal Agent Tuning for Robust Tool-Use Reasoning  
-🔥 **Preprint 2025 (arXiv: [2510.08567](https://arxiv.org/abs/2510.08567))**
-
 <p align="center">
   <a href="https://arxiv.org/pdf/2510.08567"><b>📄 Paper</b></a> •
   <a href="https://github.com/mbzuai-oryx/MATRIX"><b>💻 Code</b></a> •
