@@ -8,7 +8,9 @@
 
 ---
 
-![MATRIX Logo](docs/static/images/MATRIX_logo.png)
+<p align="center">
+  <img src="docs/static/images/MATRIX_logo.png" alt="MATRIX Logo" width="50%">
+</p>
 
 ---
 
