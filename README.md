@@ -16,7 +16,6 @@
 [![](https://img.shields.io/badge/📄_Paper-arXiv-red?style=plastic&logo=arxiv)](https://arxiv.org/abs/2510.08567)
 [![](https://img.shields.io/badge/📘_PDF-download-blue?style=plastic&logo=Adobe%20Acrobat%20Reader)](https://arxiv.org/pdf/2510.08567)
 [![](https://img.shields.io/badge/🧠_Training-DPO-lightgrey?style=plastic&logo=PyTorch)](https://github.com/hiyouga/LLaMA-Factory)
-[![](https://img.shields.io/badge/🌟_Benchmark-AgentX,GTA,GAIA-purple?style=plastic&logo=OpenAI)](https://tajamulashraf.com/matrix#results)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=plastic)](https://opensource.org/licenses/MIT)
 
 </div>
