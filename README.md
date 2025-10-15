@@ -1,16 +1,16 @@
 # MATRIX: Multimodal Agent Tuning for Robust Tool-Use Reasoning  
-🔥 **Preprint 2025 (arXiv: [2510.08567](https://arxiv.org/abs/2510.08567))**
-
 <p align="center">
   <a href="https://arxiv.org/pdf/2510.08567"><b>📄 Paper</b></a> •
   <a href="https://github.com/mbzuai-oryx/MATRIX"><b>💻 Code</b></a> •
-  <a href="https://huggingface.co/datasets/mbzuai/M-TRACE"><b>🤗 Dataset (M-TRACE)</b></a> •
-  <a href="https://tajamulashraf.com/matrix"><b>🌍 Project Page</b></a>
+  <a href="https://huggingface.co/datasets/mbzuai/M-TRACE"><b>🤗 Data</b></a> •
+  <a href="https://mbzuai-oryx.github.io/MATRIX/"><b>🌍 Project Page</b></a>
 </p>
 
 ---
 
-![MATRIX Logo](docs/static/images/MATRIX_logo.png)
+<p align="center">
+  <img src="docs/static/images/MATRIX_logo.png" alt="MATRIX Logo" width="50%">
+</p>
 
 ---
 
@@ -230,9 +230,9 @@ Run in command line manner.
 bash data_generation.sh
 ```
 
-## 🌟 Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=mat-agent/MAT-Agent&type=Date)](https://star-history.com/#mat-agent/MAT-Agent&Date)
 
+## Stage 2
+Please refer to the pref_data_generation folder
 
 
 # 🙏 Acknowledgements
