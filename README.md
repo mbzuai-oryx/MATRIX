@@ -9,7 +9,7 @@
 ---
 
 <p align="center">
-  <img src="docs/static/images/MATRIX_logo.png" alt="MATRIX Logo" width="50%">
+  <img src="docs/static/images/authors.png" alt="MATRIX Logo" width="50%">
 </p>
 
 ---
