@@ -1,15 +1,31 @@
-# MATRIX: Multimodal Agent Tuning for Robust Tool-Use Reasoning  
-<p align="center">
-  <a href="https://arxiv.org/pdf/2510.08567"><b>📄 Paper</b></a> •
-  <a href="https://github.com/mbzuai-oryx/MATRIX"><b>💻 Code</b></a> •
-  <a href="https://huggingface.co/datasets/mbzuai/M-TRACE"><b>🤗 Data</b></a> •
-  <a href="https://mbzuai-oryx.github.io/MATRIX/"><b>🌍 Project Page</b></a>
-</p>
+<div align="center">
+<figure class="center-figure">
+  <img src="docs/static/images/MATRIX_logo.png" width="85%">
+</figure>
+</div>
+
+<h1 align="left">
+    MATRIX: Multimodal Agent Tuning for Robust Tool-Use Reasoning
+</h1>
+
+<div align="left">
+
+[![](https://img.shields.io/badge/🌐_Project_Page-online-blue?style=plastic&logo=Google%20chrome)](https://tajamulashraf.com/matrix)
+[![](https://img.shields.io/badge/🤗_Dataset-MTRACE-yellow?style=plastic&logo=Hugging%20face)](https://huggingface.co/datasets/mbzuai/M-TRACE)
+[![](https://img.shields.io/badge/📦_PrefX-11K_Pairs-orange?style=plastic&logo=Hugging%20face)](https://huggingface.co/datasets/mbzuai/M-TRACE)
+[![](https://img.shields.io/badge/💻_Code-online-green?style=plastic&logo=GitHub)](https://github.com/mbzuai-oryx/MATRIX)
+[![](https://img.shields.io/badge/📄_Paper-arXiv-red?style=plastic&logo=arxiv)](https://arxiv.org/abs/2510.08567)
+[![](https://img.shields.io/badge/📘_PDF-download-blue?style=plastic&logo=Adobe%20Acrobat%20Reader)](https://arxiv.org/pdf/2510.08567)
+[![](https://img.shields.io/badge/🧠_Training-DPO-lightgrey?style=plastic&logo=PyTorch)](https://github.com/hiyouga/LLaMA-Factory)
+[![](https://img.shields.io/badge/🌟_Benchmark-AgentX,GTA,GAIA-purple?style=plastic&logo=OpenAI)](https://tajamulashraf.com/matrix#results)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=plastic)](https://opensource.org/licenses/MIT)
+
+</div>
 
 ---
 
 <p align="center">
-  <img src="docs/static/images/MATRIX_logo.png" alt="MATRIX Logo" width="50%">
+  <img src="docs/static/images/authors.png" alt="MATRIX Logo" width="100%">
 </p>
 
 ---
