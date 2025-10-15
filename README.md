@@ -1,6 +1,6 @@
 <div align="center">
 <figure class="center-figure">
-  <img src="docs/static/images/MATRIX_logo.png" width="85%">
+  <img src="docs/static/images/logo.png" width="85%">
 </figure>
 </div>
 
@@ -10,9 +10,8 @@
 
 <div align="left">
 
-[![](https://img.shields.io/badge/🌐_Project_Page-online-blue?style=plastic&logo=Google%20chrome)](https://tajamulashraf.com/matrix)
-[![](https://img.shields.io/badge/🤗_Dataset-MTRACE-yellow?style=plastic&logo=Hugging%20face)](https://huggingface.co/datasets/mbzuai/M-TRACE)
-[![](https://img.shields.io/badge/📦_PrefX-11K_Pairs-orange?style=plastic&logo=Hugging%20face)](https://huggingface.co/datasets/mbzuai/M-TRACE)
+[![](https://img.shields.io/badge/🌐_Project_Page-online-blue?style=plastic&logo=Google%20chrome)](https://mbzuai-oryx.github.io/MATRIX/)
+[![](https://img.shields.io/badge/🤗_Dataset-MTRACE-yellow?style=plastic&logo=Hugging%20face)](https://huggingface.co/datasets/Tajamul21/MATRIX)
 [![](https://img.shields.io/badge/💻_Code-online-green?style=plastic&logo=GitHub)](https://github.com/mbzuai-oryx/MATRIX)
 [![](https://img.shields.io/badge/📄_Paper-arXiv-red?style=plastic&logo=arxiv)](https://arxiv.org/abs/2510.08567)
 [![](https://img.shields.io/badge/📘_PDF-download-blue?style=plastic&logo=Adobe%20Acrobat%20Reader)](https://arxiv.org/pdf/2510.08567)
